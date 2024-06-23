@@ -41,7 +41,7 @@
 
 <div class="container">
     <h1>請輸入四位數密碼</h1>
-    <input type="text" id="password" maxlength="4" placeholder="四位數密碼">
+    <input type="text" inputmode="tel" id="password" maxlength="4" placeholder="四位數密碼">
     <button onclick="checkPassword()">提交</button>
     <div class="error" id="error">密碼錯誤，請重試。</div>
 </div>
@@ -57,6 +57,7 @@
             window.location.href = "/decard.github.io/送舊/index.html";  // 替換為您希望轉到的頁面
         } else {
             error.style.display = 'block';
+            input.value = '';
         }
     }
 </script>
