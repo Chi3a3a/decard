@@ -104,3 +104,6 @@ article p {
   border-radius: 20px;
   border: none;
 }
+label {
+  display: block;
+}
