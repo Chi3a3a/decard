@@ -50,14 +50,14 @@
     const correctPassword = "1234";  // 這是正確的四位數密碼
 
     function checkPassword() {
-        const input = document.getElementById('password').value;
+        const input = document.getElementById('password');
         const error = document.getElementById('error');
         
-        if (input === correctPassword) {
+        if (input.value === correctPassword) {
             window.location.href = "/decard.github.io/送舊/index.html";  // 替換為您希望轉到的頁面
         } else {
             error.style.display = 'block';
-            input.value = '';
+            input.value = '';  // 清空輸入框內的數字
         }
     }
 </script>
