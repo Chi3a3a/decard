@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div>
-      <label for="pass">請輸入密碼:</label>
-      <input type="number" inputmode="tel" id="pass" name="password" minlength="4" required />
-    </div>
-    <a href="/decard.github.io/送舊/index.html">送出</a>
-  </body>
-</html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密碼輸入頁面</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>請輸入四位數密碼</h1>
+    <input type="text" id="password" maxlength="4" placeholder="四位數密碼">
+    <button onclick="checkPassword()">提交</button>
+    <div class="error" id="error">密碼錯誤，請重試。</div>
+</div>
+
+<script>
+    const correctPassword = "1234";  // 這是正確的四位數密碼
+
+    function checkPassword() {
+        const input = document.getElementById('password').value;
+        const error = document.getElementById('error');
+        
+        if (input === correctPassword) {
+            window.location.href = "/decard.github.io/送舊/index.html";  // 替換為您希望轉到的頁面
+        } else {
+            error.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
