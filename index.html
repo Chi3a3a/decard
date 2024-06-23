@@ -40,14 +40,14 @@
 <body>
 
 <div class="container">
-    <h1>請輸入四位數密碼</h1>
-    <input type="text" inputmode="tel" id="password" maxlength="4" placeholder="四位數密碼">
+    <h1>~~~看完影片後請輸入密碼~~~</h1>
+    <input type="text" inputmode="tel" id="password" maxlength="4" placeholder="是四位數ㄡ">
     <button onclick="checkPassword()">提交</button>
-    <div class="error" id="error">密碼錯誤，請重試。</div>
+    <div class="error" id="error">啊喔錯了，再試一次嗷嗷嗷。</div>
 </div>
 
 <script>
-    const correctPassword = "1234";  // 這是正確的四位數密碼
+    const correctPassword = "3412";  // 這是正確的四位數密碼
 
     function checkPassword() {
         const input = document.getElementById('password');
